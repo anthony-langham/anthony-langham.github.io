@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Dr Anthony Langham</title>
+	<title>Anthony Langham</title>
 
 	<link rel="icon" href="favicon.png" type="image/png" />
 
@@ -26,11 +26,12 @@
 <body>
 	<main>
 		<div class="intro">Hello, I'm Anthony </div> <span class="ec ec-8ball"></span>
+		<span id="clock"></span>
 		<!--<div class="tagline">Doctor | Digital Health Consultant | Maltese Owner</div> -->
 		<!-- Find your icons from here - https://fontawesome.com/icons?d=gallery&s=brands -->
 		<div class="icons-social">
-			<a target="_blank" href="https://www.linkedin.com/in/dranthonylangham"><i class="fab fa-linkedin"></i></a>
-			<a target="_blank" href="https://twitter.com/anthonylangham"><i class="fab fa-twitter"></i></a>
+		<!--	<a target="_blank" href="https://www.linkedin.com/in/dranthonylangham"><i class="fab fa-linkedin"></i></a> -->
+		<!--	<a target="_blank" href="https://twitter.com/anthonylangham"><i class="fab fa-twitter"></i></a> -->
 		<!--	<a target="_blank" href="https://medium.com/@anthony.langham"><i class="fab fa-medium"></i></a> -->
 		<!--	<a target="_blank" href="https://github.com/anthony-langham"><i class="fab fa-github"></i></a> -->
 		<!--
@@ -42,4 +43,23 @@
     </div>
 	</main>
 </body>
+	
+	<script type="text/javascript">
+    var clockElement = document.getElementById('clock');
+
+    function clock() {
+        var date = new Date();
+
+        // Replace '400px' below with where you want the format to change.
+        if (window.matchMedia('(max-width: 400px)').matches) {
+            // Use this format for windows with a width up to the value above.
+            clockElement.textContent = date.toLocaleString();
+        } else {
+            // While this format will be used for larger windows.
+            clockElement.textContent = date.toString();
+        }
+    }
+
+    setInterval(clock, 1000);
+</script>
 </html>
