@@ -25,9 +25,12 @@
 </head>
 <body>
 	<main>
+
 		<div class="intro">Hello</div> 
 		<a id="clock"></a>
 		<!--<div class="tagline">Doctor | Digital  | Time </div> -->
+
+
 		<!-- Find your icons from here - https://fontawesome.com/icons?d=gallery&s=brands -->
 		<div class="icons-social">
 		<!--	<a target="_blank" href="https://www.linkedin.com/in/dranthonylangham"><i class="fab fa-linkedin"></i></a> -->
@@ -58,8 +61,10 @@ var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+"
 document.getElementById('clockbox').innerHTML=clocktext;
 }
 
+
 GetClock();
 setInterval(GetClock,1000);
+
 </script>
 
 </body>
