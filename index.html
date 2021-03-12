@@ -27,7 +27,7 @@
 	<main>
 		<div class="intro">Hello</div> 
 		<a id="clock"></a>
-		<!--<div class="tagline">Doctor | Digital Health Consultant | Maltese Owner</div> -->
+		<!--<div class="tagline">Doctor | Digital  | Time </div> -->
 		<!-- Find your icons from here - https://fontawesome.com/icons?d=gallery&s=brands -->
 		<div class="icons-social">
 		<!--	<a target="_blank" href="https://www.linkedin.com/in/dranthonylangham"><i class="fab fa-linkedin"></i></a> -->
@@ -42,24 +42,26 @@
 			<a target="_blank" href="https://codepen.io"><i class="fab fa-codepen"></i></a> -->
     </div>
 	</main>
-</body>
-	
-	<script type="text/javascript">
-    var clockElement = document.getElementById('clock');
+	<div id="clockbox"></div>
 
-    function clock() {
-        var date = new Date();
+<script type="text/javascript">
+var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-        // Replace '400px' below with where you want the format to change.
-        if (window.matchMedia('(max-width: 400px)').matches) {
-            // Use this format for windows with a width up to the value above.
-            clockElement.textContent = d.toGMTString();
-        } else {
-            // While this format will be used for larger windows.
-            clockElement.textContent = d.toGMTString();
-        }
-    }
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+var nhour=d.getHours(),nmin=d.getMinutes();
+if(nmin<=9) nmin="0"+nmin
 
-    setInterval(clock, 5000);
+var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+"";
+document.getElementById('clockbox').innerHTML=clocktext;
+}
+
+GetClock();
+setInterval(GetClock,1000);
 </script>
+
+</body>
+
 </html>
