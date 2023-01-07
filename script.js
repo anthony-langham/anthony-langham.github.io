@@ -1,7 +1,6 @@
 'use strict';
 
-// create an array of themes
-
+// create an array of css themes
 const themes = [];
 themes[0] = 'css/themes/green-white.css';
 themes[1] = 'css/themes/grey-white.css';
@@ -12,6 +11,7 @@ themes[5] = 'css/themes/white-grey.css';
 themes[6] = 'css/themes/white-indigo.css';
 themes[7] = 'css/themes/white-red.css';
 themes[8] = 'css/themes/yellow-black.css';
+themes[9] = 'css/themes/orange-white.css';
 
 //stack overflow example function
 
