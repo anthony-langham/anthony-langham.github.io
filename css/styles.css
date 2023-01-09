@@ -1,7 +1,7 @@
 /* Typography */
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 @media (min-width: 576px) {
@@ -79,7 +79,7 @@ main {
 }
 
 main > .intro {
-  font-family: "Reem Kufi", sans-serif;
+  font-family: 'Reem Kufi', sans-serif;
   font-size: 3.75em;
   font-weight: 600;
 }
@@ -88,6 +88,7 @@ main > .tagline {
   font-size: 1.5rem;
   margin: 1.5rem 0;
   font-weight: 100;
+  /* margin-bottom: 10rem; */
 }
 
 .icons-social i {
@@ -103,4 +104,9 @@ main > .tagline {
   margin-left: 0.675rem;
   width: 2.65rem;
   height: 2.65rem;
+}
+
+.refresh {
+  margin-top: 10rem;
+  font: 'Roboto';
 }

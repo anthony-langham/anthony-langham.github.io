@@ -12,6 +12,9 @@ themes[6] = 'css/themes/white-indigo.css';
 themes[7] = 'css/themes/white-red.css';
 themes[8] = 'css/themes/yellow-black.css';
 themes[9] = 'css/themes/orange-white.css';
+themes[10] = 'css/themes/yellow-blue.css';
+themes[11] = 'css/themes/yellow-white.css';
+themes[12] = 'css/themes/white-orange.css';
 
 //stack overflow example function
 
@@ -37,4 +40,8 @@ $(function () {
     // type: 'text/css',
     href: style,
   }).appendTo('head');
+});
+
+document.querySelector(`.refresh`).addEventListener(`click`, function () {
+  location.reload();
 });
