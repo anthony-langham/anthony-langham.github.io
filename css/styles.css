@@ -106,7 +106,7 @@ main > .tagline {
   height: 2.65rem;
 }
 
-.refresh {
+#refresh {
   margin-top: 20rem;
   font: 'Roboto';
 }

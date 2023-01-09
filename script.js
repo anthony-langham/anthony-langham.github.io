@@ -42,6 +42,6 @@ $(function () {
   }).appendTo('head');
 });
 
-document.querySelector(`.refresh`).addEventListener(`click`, function () {
+document.querySelector(`#refresh`).addEventListener(`click`, function () {
   location.reload();
 });
