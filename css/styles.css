@@ -92,7 +92,7 @@ main > .tagline {
 }
 
 .icons-social i {
-  padding: 10px;
+  padding: 20px;
 }
 
 .devto {
@@ -110,3 +110,8 @@ main > .tagline {
   margin-top: 5rem;
   font: 'Roboto';
 }
+
+/* .refreshBtn {
+  text-align: left;
+  vertical-align: text-top;
+} */

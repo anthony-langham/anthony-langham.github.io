@@ -11,10 +11,10 @@ themes[5] = 'css/themes/white-grey.css';
 themes[6] = 'css/themes/white-indigo.css';
 themes[7] = 'css/themes/white-red.css';
 themes[8] = 'css/themes/yellow-black.css';
-themes[9] = 'css/themes/orange-white.css';
-themes[10] = 'css/themes/yellow-blue.css';
-themes[11] = 'css/themes/yellow-white.css';
-themes[12] = 'css/themes/white-orange.css';
+// themes[9] = 'css/themes/orange-white.css';
+themes[9] = 'css/themes/yellow-blue.css';
+// themes[11] = 'css/themes/yellow-white.css';
+// themes[12] = 'css/themes/white-orange.css';
 
 //stack overflow example function
 
@@ -33,15 +33,36 @@ themes[12] = 'css/themes/white-orange.css';
 
 // This is a JQuery function, needed to import JQuery in the html file - review this **
 
-$(function () {
+// $(function () {
+//   let style = themes[Math.floor(Math.random() * themes.length)];
+//   $('<link />', {
+//     rel: 'stylesheet',
+//     // type: 'text/css',
+//     href: style,
+//   }).appendTo('head');
+// });
+
+const cssTheme = function () {
   let style = themes[Math.floor(Math.random() * themes.length)];
   $('<link />', {
     rel: 'stylesheet',
     // type: 'text/css',
     href: style,
   }).appendTo('head');
-});
+};
 
-document.querySelector(`#refresh`).addEventListener(`click`, function () {
-  location.reload();
+cssTheme();
+
+// document.querySelector(`#refresh`).addEventListener(`click`, function () {
+//   location.reload();
+// });
+
+document.querySelector(`#refresh`).addEventListener(`click`, cssTheme);
+
+// entire page
+document.body.addEventListener(`click`, cssTheme);
+
+//wave secret page :)
+document.querySelector(`.wave`).addEventListener(`click`, function () {
+  window.location = 'game.html';
 });
