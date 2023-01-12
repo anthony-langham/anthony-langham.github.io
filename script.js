@@ -31,17 +31,6 @@ themes[9] = 'css/themes/yellow-blue.css';
 //     }
 // });
 
-// This is a JQuery function, needed to import JQuery in the html file - review this **
-
-// $(function () {
-//   let style = themes[Math.floor(Math.random() * themes.length)];
-//   $('<link />', {
-//     rel: 'stylesheet',
-//     // type: 'text/css',
-//     href: style,
-//   }).appendTo('head');
-// });
-
 const cssTheme = function () {
   let style = themes[Math.floor(Math.random() * themes.length)];
   $('<link />', {
@@ -57,12 +46,13 @@ cssTheme();
 //   location.reload();
 // });
 
+// refresh button css reload using a defined function cssTheme, rather than anonymous function
 document.querySelector(`#refresh`).addEventListener(`click`, cssTheme);
 
-// entire page
+// entire page reload css :)
 document.body.addEventListener(`click`, cssTheme);
 
-//wave secret page :)
+//click on wave emoji for a secret page :)
 document.querySelector(`.wave`).addEventListener(`click`, function () {
   window.location = 'game.html';
 });
